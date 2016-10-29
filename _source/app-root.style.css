@@ -1,0 +1,28 @@
+html,body {
+    height: 100%;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.app {
+    display: block;
+    background-color: #fff;
+    height: 100%;
+    border: solid 5px #c00;
+}
+
+.app__container {
+    display: block;
+    background-color: #c00;
+    margin: 10px;
+    min-height: 30px;
+}

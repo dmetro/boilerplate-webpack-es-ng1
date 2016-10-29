@@ -1,2 +1,9 @@
-# start-webpack-es-angular-1x-components
-start-webpack-es-angular-1x-components
+## Webpack Angular-1.x (components) ES6
+
+
+```
+$ npm i
+$ webpack
+$ NODE_ENV=production webpack
+```
+
