@@ -5,19 +5,19 @@
 export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
     console.log("CONFIG");
     
-    $urlRouterProvider.otherwise("/login");
+    $urlRouterProvider.otherwise("/");
     
-    $stateProvider.state("login", {
-        url: "/login",
-        template: `
-            <user-login class="main__container login"></user-login>
-        `
-    });
+//    $stateProvider.state("login", {
+//        url: "/login",
+//        template: `
+//            <user-login class="general__container login"></user-login>
+//        `
+//    });
     
     $stateProvider.state("profile", {
         url: "/:profileId",
         template: `
-            <user-profile profid="$ctrl.profileId" class="main__container profile"></user-profile>
+            <app-profile profid="$ctrl.profileId" class="general__container profile"></app-profile>
         `,
         controller: function ($stateParams) {
             this.profileId = $stateParams.profileId;

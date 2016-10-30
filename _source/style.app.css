@@ -1,4 +1,7 @@
-html,body {
+/* RESET */
+
+html,
+body {
     height: 100%;
 }
 
@@ -13,16 +16,22 @@ body {
     margin: 0;
 }
 
-.app {
+
+/* APP */
+
+.app,
+.app__container {
     display: block;
-    background-color: #fff;
+}
+
+.app {
+    background-color: #ddd;
     height: 100%;
-    border: solid 5px #c00;
+    border: solid 3px #c00;
+    padding: 5px 10px;
 }
 
 .app__container {
-    display: block;
-    background-color: #c00;
-    margin: 10px;
-    min-height: 30px;
+    background-color: #fff;
+    margin-bottom: 5px;
 }
