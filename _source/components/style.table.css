@@ -1,0 +1,30 @@
+.table,
+.table__container {
+    border: solid 1px #aaa;
+    display: table;
+    width: 100%;
+}
+
+.table__container {}
+
+.table__head {
+    display: table-header-group;
+}
+
+.table__body {
+    display: table-row-group;
+}
+
+.table__foot {
+    display: table-footer-group;
+}
+
+.table__row {
+    display: table-row;
+}
+
+.table__cel {
+    border: solid 1px #aaa;
+    display: table-cell;
+    padding: 3px;
+}

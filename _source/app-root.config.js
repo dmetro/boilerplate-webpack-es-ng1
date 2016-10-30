@@ -7,12 +7,12 @@ export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
     
     $urlRouterProvider.otherwise("/");
     
-//    $stateProvider.state("login", {
-//        url: "/login",
-//        template: `
-//            <user-login class="general__container login"></user-login>
-//        `
-//    });
+    $stateProvider.state("login", {
+        url: "/login",
+        template: `
+            <app-login class="general__container login"></app-login>
+        `
+    });
     
     $stateProvider.state("profile", {
         url: "/:profileId",

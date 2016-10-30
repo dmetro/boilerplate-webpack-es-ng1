@@ -1,0 +1,14 @@
+.form {}
+
+.form__container {}
+
+.form__head {}
+
+.form__body {}
+
+.form__foot {}
+
+.input {
+    width: 100%;
+    padding: 3px 5px;
+}

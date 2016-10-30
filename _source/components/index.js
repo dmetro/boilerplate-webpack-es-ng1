@@ -1,13 +1,15 @@
 "use strict";
 
-import angular  from "angular";
+import angular from "angular";
 // ---------------------------------------------------------------
-//import SomeComponent from "./some-component/some-component.component.js";
-//import SomeModule    from "./some-module/index.js";
+import AppFormModule from "./app-form/index.js";
+
+import "./style.table.css";
+
 
 
 const AppComponentsModule = angular.module("AppComponentsModule", [
-    
+    AppFormModule
 ])
 .name;
 

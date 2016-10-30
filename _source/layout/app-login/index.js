@@ -2,11 +2,11 @@
 
 import angular  from "angular";
 // ---------------------------------------------------------------
-//import AppLogin   from "./app-login/index.js";
+import AppLoginController   from "./app-login.component.js";
 
-const AppLoginModule = angular.module("AppLoginModule", [
-    
-])
+
+const AppLoginModule = angular.module("AppLoginModule", [])
+.component("appLogin", AppLoginController)
 .name;
 
 export default AppLoginModule;

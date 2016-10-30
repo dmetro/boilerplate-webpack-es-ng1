@@ -7,18 +7,22 @@ import Config           from "./app-root.config.js";
 import Run              from "./app-root.run.js";
 import AppRootComponent from "./app-root.component.js";
 
-import AppLayout        from "./layout/index.js";
-import AppComponents    from "./components/index.js";
+import AppLayoutModule     from "./layout/index.js";
+import AppComponentsModule from "./components/index.js";
 // ---------------------------------------------------------------
+import "./style.reset.css";
 import "./style.app.css";
 import "./style.top.css";
 import "./style.general.css";
 
 
 
+
+
 angular.module("myApp", [
     uiRouter,
-    AppLayout
+    AppLayoutModule,
+    AppComponentsModule
 ])
 .run(Run)
 .config(Config)
