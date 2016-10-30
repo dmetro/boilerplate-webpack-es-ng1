@@ -1,0 +1,24 @@
+.nav {
+    border: solid 2px #00f;
+}
+
+.nav__container {}
+
+.nav__head {}
+
+.nav__body {}
+
+.nav__foot {}
+
+.nav__list {
+    text-align: center;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+.nav__item a {
+    display: block;
+    padding: 10px;
+}

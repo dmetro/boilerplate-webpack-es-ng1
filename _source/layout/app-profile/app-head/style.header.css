@@ -1,0 +1,14 @@
+.header {
+}
+
+.header__container {
+    background-color: #fff;
+    padding: 5px;
+    border: solid 2px #333;
+}
+
+.header__head {}
+
+.header__body {}
+
+.header__foot {}

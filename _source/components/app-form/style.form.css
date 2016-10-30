@@ -2,13 +2,31 @@
 
 .form__container {}
 
-.form__head {}
+.form__head {
+    margin-bottom: 10px;
+}
 
 .form__body {}
 
-.form__foot {}
+.form__foot {
+    margin-top: 10px;
+}
 
 .input {
     width: 100%;
     padding: 3px 5px;
+}
+
+.btn {
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    padding: 10px;
+}
+
+.btn_success {
+    color: #fff;
+    font-weight: bold;
+    background-color: #0a0;
 }

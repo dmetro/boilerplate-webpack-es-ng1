@@ -3,7 +3,7 @@
 /*@ngInject*/
 
 export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
-    console.log("CONFIG");
+    console.log("root CONFIG");
     
     $urlRouterProvider.otherwise("/");
     
