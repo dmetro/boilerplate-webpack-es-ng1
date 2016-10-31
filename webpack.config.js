@@ -46,14 +46,19 @@ myBuild.plugins = [envDefinition, errorsPlugin, extractStyles, browserSyncDvServ
 
 
 
-
 // ---------------------------------------------------------------------------------------------------------------------------------------
 // LOADERS / LOADERS / LOADERS / LOADERS / LOADERS / LOADERS / LOADERS / LOADERS / LOADERS / LOADERS / LOADERS / LOADERS / LOADERS /
 let babelLoader = {
     test: /\.js$/,
     exclude: /(node_modules)/,
     include: path.resolve(__dirname + "/_source"),
+    // ------------------------------------------
+    // https://www.npmjs.com/package/ng-annotate-loader
+    // https://github.com/huston007/ng-annotate-loader
+    // ng-annotate - add this loader to project
+    // ng-annotate!babel?all-query-here
     loader: "babel",
+    // ------------------------------------------
     query: {
         plugins: ["transform-runtime"],
         presets: ["es2015", "stage-0"]

@@ -1,9 +1,9 @@
 "use strict";
 
-/*@ngInject*/
-export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
-    console.log("profile CONFIG");
-    
+
+function AppProfileConfig($locationProvider, $stateProvider, $urlRouterProvider) {
+    console.log("CONFIG init: app-profile");
+
     $stateProvider.state("profile.home", {
         url: "/",
         resolve: {
@@ -28,3 +28,7 @@ export default ($locationProvider, $stateProvider, $urlRouterProvider) => {
         template: `<main-contacts class="main__container"></main-contacts>`
     });
 };
+
+AppProfileConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
+
+export default AppProfileConfig;
