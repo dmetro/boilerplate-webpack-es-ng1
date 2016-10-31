@@ -5,10 +5,10 @@ function AppProfileConfig($locationProvider, $stateProvider, $urlRouterProvider)
     console.log("CONFIG init: app-profile");
 
     $stateProvider.state("profile.home", {
-        url: "/",
-        resolve: {
-            _user: function () {console.log("resolve: user"); }
-        },
+        url: "/home",
+//        resolve: {
+//            _user: function () {console.log("resolve: user"); }
+//        },
         template: `<main-home class="main__container"></main-home>`
     });
     
@@ -32,3 +32,4 @@ function AppProfileConfig($locationProvider, $stateProvider, $urlRouterProvider)
 AppProfileConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
 
 export default AppProfileConfig;
+

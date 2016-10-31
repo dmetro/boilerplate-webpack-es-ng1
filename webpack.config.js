@@ -22,7 +22,7 @@ let autoprefixer      = require("autoprefixer");
 // PLUGINS / PLUGINS / PLUGINS / PLUGINS / PLUGINS / PLUGINS / PLUGINS / PLUGINS / PLUGINS / PLUGINS / PLUGINS / PLUGINS / PLUGINS /
 let compressConfig = {
     warnings:     false,
-    drop_console: true,
+    drop_console: false,
     unsafe:       false
 };
 const serverConfig = {
@@ -40,8 +40,9 @@ let extractStyles       = new extractTextPlugin("../style/style.css", {allChunks
 let browserSyncDvServer = new browserSyncPlugin(serverConfig);
 
 myBuild.plugins = [envDefinition, errorsPlugin, extractStyles, browserSyncDvServer];
-
 (NODE_ENV === "production") ? myBuild.plugins.push(uglifyPlugin) : console.log("DEVELOP MODE ===================================== ");
+//myBuild.plugins = [envDefinition, errorsPlugin, extractStyles, browserSyncDvServer, uglifyPlugin];
+
 
 
 
@@ -57,12 +58,14 @@ let babelLoader = {
     // https://github.com/huston007/ng-annotate-loader
     // ng-annotate - add this loader to project
     // ng-annotate!babel?all-query-here
-    loader: "babel",
+    //loader: "babel",
     // ------------------------------------------
-    query: {
-        plugins: ["transform-runtime"],
-        presets: ["es2015", "stage-0"]
-    }
+    //query: {
+    //    plugins: ["transform-runtime"],
+    //    presets: ["es2015", "stage-0"]
+    //}
+    loaders: ["ng-annotate", "babel?presets[]=es2015"],
+    //loaders: ["ng-annotate","babel?presets[]=es2015&stage-0&plugin[]=transform-runtime"],
 };
 let fileLoader = {
     test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,

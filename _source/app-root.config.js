@@ -1,9 +1,8 @@
 "use strict";
 
-
 function AppRootConfig($locationProvider, $stateProvider, $urlRouterProvider) {
     console.log("CONFIG init: app-root");
-    
+    $urlRouterProvider.otherwise.$inject = ["$injector", "$location"];
     $urlRouterProvider.otherwise(function ($injector, $location) {
         let $state     = $injector.get("$state");
         let $rootScope = $injector.get("$rootScope");
@@ -17,18 +16,20 @@ function AppRootConfig($locationProvider, $stateProvider, $urlRouterProvider) {
             return "/login"
         }
     });
-    
     $stateProvider.state("login", {
         url: "/login",
         template: `<app-login class="general__container login"></app-login>`
     });
-    
     $stateProvider.state("profile", {
         url: "/:profileId",
         abstract: true,
-//        resolve: {_userInfoFromServer: function () {console.log("resolve: USER");}},
+        resolve: {
+            _info: function () {console.log("resolve: info from service");}
+        },
         template: `<app-profile profid="$ctrl.profileId" class="general__container profile"></app-profile>`,
+        // -----------------------------------------------------------------
         controller: function ($stateParams) {
+            "ngInject";
             this.profileId = $stateParams.profileId;
         },
         controllerAs: "$ctrl"

@@ -19,8 +19,8 @@ import "./style.general.css";
 
 angular.module("myApp", [
     uiRouter,
-    AppLayoutModule,
-    AppComponentsModule
+    AppComponentsModule,
+    AppLayoutModule
 ])
 .run(RootRun)
 .config(RootConfig)

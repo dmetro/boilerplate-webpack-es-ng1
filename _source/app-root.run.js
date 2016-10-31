@@ -1,6 +1,10 @@
 "use strict";
-/*@ngInject*/
-export default ($rootScope, $state) => {
-    console.log("RUN");
+
+function AppRootRun($rootScope, $state) {
     $rootScope.profileId = "mr-heisenberg";
+    console.log("RUN init: profileId -", $rootScope.profileId);
 }
+
+AppRootRun.$inject = ["$rootScope", "$state"];
+
+export default AppRootRun;
