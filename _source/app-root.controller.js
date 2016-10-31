@@ -1,14 +1,15 @@
 "use strict";
 
+
 class AppRootController {
-    /*@ngInject*/
-    constructor() {
+    constructor($rootScope) {
         console.log("init: app-root.component");
+        this.profileId = $rootScope.profileId;
     }
     
     $onInit() {}
 }
 
-//AppRootController.$inject = [""];
+AppRootController.$inject = ["$rootScope"];
 
 export default AppRootController;

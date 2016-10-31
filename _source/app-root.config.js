@@ -24,10 +24,9 @@ function AppRootConfig($locationProvider, $stateProvider, $urlRouterProvider) {
         url: "/:profileId",
         abstract: true,
         resolve: {
-            _info: function () {console.log("resolve: info from service");}
+            _info: function () {console.log("state-resolve: info from service");}
         },
         template: `<app-profile profid="$ctrl.profileId" class="general__container profile"></app-profile>`,
-        // -----------------------------------------------------------------
         controller: function ($stateParams) {
             "ngInject";
             this.profileId = $stateParams.profileId;

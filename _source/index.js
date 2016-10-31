@@ -7,8 +7,8 @@ import RootConfig       from "./app-root.config.js";
 import RootRun          from "./app-root.run.js";
 import AppRootComponent from "./app-root.component.js";
 // ---------------------------------------------------------------
-import AppLayoutModule     from "./layout/index.js";
-import AppComponentsModule from "./components/index.js";
+import AppLayoutModule     from "./app-layout/index.js";
+import AppComponentsModule from "./app-components/index.js";
 // ---------------------------------------------------------------
 import "./style.reset.css";
 import "./style.app.css";

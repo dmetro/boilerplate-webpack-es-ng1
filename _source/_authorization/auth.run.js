@@ -1,11 +1,10 @@
 "use strict";
 
-function AppRootRun($rootScope, $state) {
+function LayoutRun($rootScope, $state, authService) {
     $rootScope.profileId = "mr-heisenberg";
-    console.log("RUN init: profileId -", $rootScope.profileId);
+    console.log("RUN init: layout | profileId -", $rootScope.profileId);
     
     // ------------------------------------------------------------------------------------------------------
-    // https://github.com/angular-ui/ui-router/wiki#state-change-events
     $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams, options) {
         console.log("$stateChangeStart ==================================================================");
         console.log(event);
@@ -13,9 +12,15 @@ function AppRootRun($rootScope, $state) {
         console.log(fromParams, toParams);
         console.log(options);
         console.log("====================================================================================");
+        // -----------------------------------------------------------------------
+        if (!authService.checkAuth(toState)) {
+            event.preventDefault();
+            event.stopPropagation();
+            $state.go("login");
+        }
     });
 }
 
-AppRootRun.$inject = ["$rootScope", "$state"];
+LayoutRun.$inject = ["$rootScope", "$state", "authService"];
 
-export default AppRootRun;
+export default LayoutRun;

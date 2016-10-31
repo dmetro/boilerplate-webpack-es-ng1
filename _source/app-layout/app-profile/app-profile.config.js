@@ -7,7 +7,7 @@ function AppProfileConfig($locationProvider, $stateProvider, $urlRouterProvider)
     $stateProvider.state("profile.home", {
         url: "/home",
 //        resolve: {
-//            _user: function () {console.log("resolve: user"); }
+//            _user: function () {console.log("state-resolve: home"); }
 //        },
         template: `<main-home class="main__container"></main-home>`
     });
@@ -32,4 +32,3 @@ function AppProfileConfig($locationProvider, $stateProvider, $urlRouterProvider)
 AppProfileConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
 
 export default AppProfileConfig;
-
