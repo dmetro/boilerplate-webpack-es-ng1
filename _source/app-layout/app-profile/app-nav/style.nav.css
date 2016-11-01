@@ -19,6 +19,12 @@
 }
 
 .nav__item a {
+    text-decoration: none;
     display: block;
     padding: 10px;
+}
+
+.nav__item a.active {
+    color: #fff;
+    background-color: #00f;
 }

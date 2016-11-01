@@ -1,5 +1,11 @@
 <div class="nav__list">
-    <li class="nav__item"><a href="javascript:void(0);">home</a></li>
-    <li class="nav__item"><a href="javascript:void(0);">product</a></li>
-    <li class="nav__item"><a href="javascript:void(0);">contacts</a></li>
+    <li class="nav__item">
+        <a class="link" ui-sref-active="active" ui-sref="profile.home({profileId:$ctrl.profileId})">home</a>
+    </li>
+    <li class="nav__item">
+        <a class="link" ui-sref-active="active" ui-sref="profile.products({profileId:$ctrl.profileId})">products</a>
+    </li>
+    <li class="nav__item">
+        <a class="link" ui-sref-active="active" ui-sref="profile.contacts({profileId:$ctrl.profileId})">contacts</a>
+    </li>
 </div>

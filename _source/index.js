@@ -10,6 +10,8 @@ import AppRootComponent from "./app-root.component.js";
 import AppLayoutModule     from "./app-layout/index.js";
 import AppComponentsModule from "./app-components/index.js";
 // ---------------------------------------------------------------
+import SomeCustomService from "./app-services/service-example.service.js";
+// ---------------------------------------------------------------
 import "./style.reset.css";
 import "./style.app.css";
 import "./style.top.css";
@@ -25,4 +27,5 @@ angular.module("myApp", [
 .run(RootRun)
 .config(RootConfig)
 .component("appRoot", AppRootComponent)
+.service("SomeCustomService", SomeCustomService)
 .name;

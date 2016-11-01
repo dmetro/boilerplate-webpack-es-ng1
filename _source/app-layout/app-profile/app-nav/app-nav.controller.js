@@ -1,14 +1,19 @@
 "use strict";
 
+
+
 class AppNavController {
-    /*@ngInject*/
-    constructor() {
+    constructor($rootScope) {
+        this.profileId = $rootScope.profileId;
         console.log("init: app-nav.component");
+        console.log(this);
     }
     
-    $onInit() {}
+    $onInit() {
+        
+    }
 }
 
-//AppNavController.$inject = [""];
+AppNavController.$inject = ["$rootScope"];
 
 export default AppNavController;
