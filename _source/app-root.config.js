@@ -27,16 +27,14 @@ function AppRootConfig($locationProvider, $stateProvider, $urlRouterProvider) {
         url: "/:profileId",
         abstract: true,
         resolve: {
-            // ----------------------------------------------------------------------------------------------
-            //_isAuth: function (AuthByResolveService) {
-            //    "ngInject";
-            //    //if (!appAuthService.checkAuth()) {
-            //    //    return $q.reject("Error: NON Authorized");
-            //    //}
-            //},
-            // ----------------------------------------------------------------------------------------------
-            _info: function () {
-                console.log("state-resolve: profile-state (auth here)");
+            _isAuth: function ($q, AuthByResolveService) {
+                "ngInject";
+                if (!AuthByResolveService.checkAuth(true)) {
+                    console.log("state-resolve: profile-state (_isAuth) NOT resolved");
+                    return $q.reject("Error: NON Authorized");
+                } else {
+                    console.log("state-resolve: profile-state (_isAuth) resolved");
+                }
             }
         },
         template: `<app-profile profid="$ctrl.profileId" class="general__container profile"></app-profile>`,

@@ -39,9 +39,9 @@ let errorsPlugin        = new webpack.NoErrorsPlugin();
 let extractStyles       = new extractTextPlugin("../style/style.css", {allChunks: true});
 let browserSyncDvServer = new browserSyncPlugin(serverConfig);
 
-myBuild.plugins = [envDefinition, errorsPlugin, extractStyles, browserSyncDvServer];
-(NODE_ENV === "production") ? myBuild.plugins.push(uglifyPlugin) : console.log("DEVELOP MODE ===================================== ");
-//myBuild.plugins = [envDefinition, errorsPlugin, extractStyles, browserSyncDvServer, uglifyPlugin];
+//myBuild.plugins = [envDefinition, errorsPlugin, extractStyles, browserSyncDvServer];
+//(NODE_ENV === "production") ? myBuild.plugins.push(uglifyPlugin) : console.log("DEVELOP MODE ===================================== ");
+myBuild.plugins = [envDefinition, errorsPlugin, extractStyles, browserSyncDvServer, uglifyPlugin];
 
 
 
