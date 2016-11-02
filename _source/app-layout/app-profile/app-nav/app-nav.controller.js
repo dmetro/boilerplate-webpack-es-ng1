@@ -4,9 +4,8 @@
 
 class AppNavController {
     constructor($rootScope) {
-        this.profileId = $rootScope.profileId;
         console.log("init: app-nav.component");
-        console.log(this);
+        this.profileId = $rootScope.profileId.toLowerCase();
     }
     
     $onInit() {

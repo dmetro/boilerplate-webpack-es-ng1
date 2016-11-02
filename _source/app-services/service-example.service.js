@@ -1,14 +1,14 @@
 "use strict";
 
-class SomeCustomService {
-    constructor($injected) {
-        this._$injected = $injected;
+class CustomService {
+    constructor() {
+        this.name = "Custom-Service";
     }
     makeSomeoneDoSomething() {
-        return this._$injected(args);
+        return true;
     }
 };
 
-SomeCustomService.$inject = ["$injected"];
+//CustomService.$inject = [""];
 
-export default SomeCustomService;
+export default CustomService;

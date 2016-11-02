@@ -1,5 +1,6 @@
 .general {
-    border: solid 1px #00f;
+    border: solid 5px #ff00ff;
     min-height: 100px;
     padding: 5px;
+    margin-top: 10px;
 }

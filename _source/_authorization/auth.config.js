@@ -38,23 +38,3 @@ function AppRootConfig($locationProvider, $stateProvider, $urlRouterProvider) {
 AppRootConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
 
 export default AppRootConfig;
-
-
-
-
-
-
-//    $urlRouterProvider.otherwise.$inject = ["$injector", "$location"];
-//    $urlRouterProvider.otherwise(function ($injector, $location) {
-//        let $state     = $injector.get("$state");
-//        let $rootScope = $injector.get("$rootScope");
-//        try {
-//            if (!$rootScope.profileId) {
-//                $state.go("login");
-//            } else {
-//                $state.go("profile.home", {profileId: $rootScope.profileId}, {location: true});
-//            }
-//        } catch (e) {
-//            return "/login"
-//        }
-//    });

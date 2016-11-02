@@ -12,12 +12,7 @@ function LayoutRun($rootScope, $state, authService) {
         console.log(fromParams, toParams);
         console.log(options);
         console.log("====================================================================================");
-        // -----------------------------------------------------------------------
-        if (!authService.checkAuth(toState)) {
-            event.preventDefault();
-            event.stopPropagation();
-            $state.go("login");
-        }
+
     });
 }
 

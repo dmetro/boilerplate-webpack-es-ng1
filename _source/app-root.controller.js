@@ -1,6 +1,7 @@
 "use strict";
 
 
+
 class AppRootController {
     constructor($rootScope) {
         console.log("init: app-root.component");

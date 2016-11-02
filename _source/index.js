@@ -9,8 +9,7 @@ import AppRootComponent from "./app-root.component.js";
 // ---------------------------------------------------------------
 import AppLayoutModule     from "./app-layout/index.js";
 import AppComponentsModule from "./app-components/index.js";
-// ---------------------------------------------------------------
-import SomeCustomService from "./app-services/service-example.service.js";
+import AppServicesModule   from "./app-services/index.js";
 // ---------------------------------------------------------------
 import "./style.reset.css";
 import "./style.app.css";
@@ -21,11 +20,11 @@ import "./style.general.css";
 
 angular.module("myApp", [
     uiRouter,
+    AppServicesModule,
     AppComponentsModule,
     AppLayoutModule
 ])
 .run(RootRun)
 .config(RootConfig)
 .component("appRoot", AppRootComponent)
-.service("SomeCustomService", SomeCustomService)
 .name;
