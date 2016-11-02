@@ -1,22 +1,22 @@
 "use strict";
 // --------------------------------------------------------------------------------------------------------
 // http://stepansuvorov.com/blog/tag/interceptor/
-// http://stepansuvorov.com/blog/2014/04/angularjs-interceptors-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B/
 
 
-// --------------------------------------------------------------------------------------------------------
-class AuthByResolveService {
-    constructor($injected) {
-        this._$injected = $injected;
+class RejectInterceptor {
+    constructor($q, $injector) {
+        this.name = "Auth-Rejector-Interceptor";
     }
-    checkReturnTrue() {
-        return true;
-    }
-    checkReturnFalse() {
-        return true;
+    
+    getResponceError(rejection) {
+        let $state = $injector.get("$state");
+        if (rejection.status === 401) {
+            $state.go("login");
+        }
+        return $q.reject(rejection);
     }
 };
 
-AuthByResolveService.$inject = ["$injected"];
+RejectInterceptor.$inject = ["$q", "$injector"];
 
-export default AuthByResolveService;
+export default RejectInterceptor;
