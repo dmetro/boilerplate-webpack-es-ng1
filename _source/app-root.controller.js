@@ -8,7 +8,9 @@ class AppRootController {
         this.profileId = $rootScope.profileId;
     }
     
-    $onInit() {}
+    $onInit() {
+        
+    }
 }
 
 AppRootController.$inject = ["$rootScope"];

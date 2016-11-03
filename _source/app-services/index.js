@@ -15,7 +15,7 @@ import SessionStorageService from "./storage-services/session-storage.service.js
 
 
 
-// ---------------------------------------------------------------
+
 const AppServicesModule = angular.module("AppServicesModule", [])
 .config(ServicesConfig)
 .service("CustomService", CustomService)
