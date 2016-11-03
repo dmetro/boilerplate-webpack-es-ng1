@@ -98,13 +98,13 @@ let extractStyleLoader = {
     test: /\.(css|scss|sass)$/,
     include: path.resolve(__dirname + "/_source"),
     loader: extractStyles.extract("style", ["css?minimize", "postcss", "sass"])
-}
+};
 let rawLoader = {
     test: /\.html$/,
     exclude: /(node_modules)/,
     include: path.resolve(__dirname + "/_source"),
     loader: 'raw'
-}
+};
 
 myBuild.module = {};
 
@@ -139,7 +139,7 @@ myBuild.output = {
     path: path.resolve(__dirname + "/public/resource/scripts/"),
     publicPath: "/resource/scripts/",
     filename: "[name].js",
-    library: "[name]",
+    library: "[name]"
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------------

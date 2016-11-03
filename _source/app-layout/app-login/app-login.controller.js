@@ -1,14 +1,15 @@
 "use strict";
 
+
 class AppLoginController {
-    /*@ngInject*/
-    constructor() {
+    constructor(RejectInterceptor) {
         console.log("init: app-login.component");
+        console.log(RejectInterceptor);
     }
     
     $onInit() {}
 }
 
-//AppLoginController.$inject = [""];
+AppLoginController.$inject = ["RejectInterceptor"];
 
 export default AppLoginController;

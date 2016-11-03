@@ -15,19 +15,17 @@ function AppRootRun($rootScope, $state, $location, AuthByEventService) {
         console.log("---------------------------------------------------");
         console.log("FROM STATE:\t", fromState);
         console.log("TO STATE:\t", toState);
-        console.log("PARAMS from:", fromParams);
-        console.log("PARAMS to:\t", toParams);
+        console.log("FROM PARAMS:", fromParams);
+        console.log("TO PARAMS:\t", toParams);
         console.log("---------------------------------------------------");
         console.log("OPTIONS:", options);
         // --------------------------------------------------------------------------------------------------
         if(toState.name === "login") {
-            console.log(" --------- You Should Authorize --------- ");
             return;
         }
         if (!AuthByEventService.checkAuth(true)) {
             event.preventDefault();
             $state.go("login");
-            console.log(" --------- Non Authorized --------- ");
             return;
         }
         // --------------------------------------------------------------------------------------------------

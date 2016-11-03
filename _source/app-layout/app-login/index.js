@@ -1,12 +1,12 @@
 "use strict";
-
+// ---------------------------------------------------------------
 import angular  from "angular";
 // ---------------------------------------------------------------
-import AppLoginController   from "./app-login.component.js";
+import AppLoginComponent   from "./app-login.component.js";
 
 
 const AppLoginModule = angular.module("AppLoginModule", [])
-.component("appLogin", AppLoginController)
+.component("appLogin", AppLoginComponent)
 .name;
 
 export default AppLoginModule;
