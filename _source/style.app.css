@@ -4,15 +4,15 @@
 }
 
 .app {
-    background-color: #333;
     height: 100%;
-    border: solid 5px #00ffff;
     padding: 10px;
+    border: solid 5px #0ff;
+    background-color: #333;
 }
 
 .app__container {
-    background-color: #fff;
     max-width: 600px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
 }
