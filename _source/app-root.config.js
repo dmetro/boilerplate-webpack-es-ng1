@@ -1,5 +1,9 @@
 "use strict";
 
+import AppLoginTmp   from "./tmp-state.app-login.html";
+import AppProfileTmp from "./tmp-state.app-profile.html";
+
+
 function AppRootConfig($locationProvider, $stateProvider, $urlRouterProvider) {
     console.log("CONFIG init: app-root");
     
@@ -16,13 +20,13 @@ function AppRootConfig($locationProvider, $stateProvider, $urlRouterProvider) {
     
     $stateProvider.state("login", {
         url: "/login",
-        template: `<app-login class="general__container login"></app-login>`
+        template: AppLoginTmp
     });
     
     $stateProvider.state("profile", {
         url: "/:profileId",
         abstract: true,
-        template: `<app-profile profid="$ctrl.profileId" class="general__container profile"></app-profile>`,
+        template: AppProfileTmp,
         controller: function ($stateParams) {
             "ngInject";
             this.profileId = $stateParams.profileId;
@@ -34,9 +38,6 @@ function AppRootConfig($locationProvider, $stateProvider, $urlRouterProvider) {
 AppRootConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
 
 export default AppRootConfig;
-
-
-
 
 
 
@@ -62,7 +63,6 @@ export default AppRootConfig;
         //    }
         //},
         // --------------------------------------------------------------------------------
-
 
 
     //$urlRouterProvider.otherwise(function ($injector, $location) {

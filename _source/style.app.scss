@@ -1,0 +1,14 @@
+.app,
+.app__container {
+    display: block;
+}
+
+.app {
+//    background-color: #333;
+    height: 100%;
+    z-index: 1;
+}
+
+.app__container {
+    position: relative;
+}

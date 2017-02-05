@@ -1,15 +1,16 @@
 .main {
-    border: solid 2px #c00;
-}
-
-.main__container {
-    font-size: 18px;
-    line-height: 2;
+    display: block;
+/*    border: solid 5px #222;*/
+    font-size: 21px;
     text-align: center;
     text-transform: uppercase;
     display: block;
     padding: 10px;
+    height: 100%;
+    z-index: 1;
 }
+
+.main__container {}
 
 .main__head {}
 

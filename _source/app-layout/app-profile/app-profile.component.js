@@ -1,7 +1,7 @@
 "use strict";
 
 import controller from "./app-profile.controller.js";
-import template   from "./app-profile.tmp.html";
+import template   from "./tmp.app-profile.html";
 
 
 const AppProfileComponent = {

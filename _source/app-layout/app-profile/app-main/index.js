@@ -7,7 +7,7 @@ import MainContactsComponent from "./main-contacts/main-contacts.component.js";
 import MainHomeComponent    from "./main-home/main-home.component.js";
 import MainProductsComponent from "./main-products/main-products.component.js";
 // ---------------------------------------------------------------
-import "./style.main.css";
+import "./style.main.scss";
 
 
 

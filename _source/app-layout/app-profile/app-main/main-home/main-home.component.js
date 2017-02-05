@@ -1,7 +1,7 @@
 "use strict";
 
 import controller from "./main-home.controller.js";
-import template   from "./main-home.tmp.html";
+import template   from "./tmp.main-home.html";
 
 
 const MainHomeComponent = {

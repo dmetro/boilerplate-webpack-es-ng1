@@ -11,11 +11,11 @@ import AppLayoutModule     from "./app-layout/index.js";
 import AppComponentsModule from "./app-components/index.js";
 import AppServicesModule   from "./app-services/index.js";
 // ---------------------------------------------------------------
-import "./style.reset.css";
-import "./style.app.css";
-import "./style.top.css";
-import "./style.general.css";
-
+import "./style.app.scss";
+import "./style.reset.scss";
+import "./style.root.scss";
+import "./style.top.scss";
+import "./style.uiview.scss";
 
 
 angular.module("myApp", [

@@ -1,0 +1,21 @@
+.footer {
+    color: #fff;
+    height: 100px;
+    background-color: #333;
+    padding: 20px;
+    z-index: 10;
+}
+.footer__container {
+    text-align: center;
+}
+.footer__head,
+.footer__body,
+.footer__foot {
+    line-height: 30px;
+    padding: 10px;
+    display: inline-block;
+    outline: dashed 1px #eee;
+}
+.footer__head {}
+.footer__body {}
+.footer__foot {}

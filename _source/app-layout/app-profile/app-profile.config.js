@@ -1,5 +1,9 @@
 "use strict";
 
+import MainMainTmp     from "./tmp-state.main-home.html";
+import MainProductsTmp from "./tmp-state.main-products.html";
+import MainContactsTmp from "./tmp-state.main-contacts.html";
+
 
 
 function AppProfileConfig($locationProvider, $stateProvider, $urlRouterProvider) {
@@ -7,17 +11,17 @@ function AppProfileConfig($locationProvider, $stateProvider, $urlRouterProvider)
     // ---------------------------------------------------------------------------
     $stateProvider.state("profile.home", {
         url: "/home",
-        template: `<main-home class="main__container"></main-home>`
+        template: MainMainTmp
     });
     // ---------------------------------------------------------------------------
     $stateProvider.state("profile.products", {
         url: "/products",
-        template: `<main-products class="main__container"></main-products>`
+        template: MainProductsTmp
     });
     // ---------------------------------------------------------------------------
     $stateProvider.state("profile.contacts", {
         url: "/contacts",
-        template: `<main-contacts class="main__container"></main-contacts>`
+        template: MainContactsTmp
     });
 };
 

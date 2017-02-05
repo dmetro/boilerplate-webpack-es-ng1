@@ -1,7 +1,7 @@
 "use strict";
 
 import controller from "./main-contacts.controller.js";
-import template   from "./main-contacts.tmp.html";
+import template   from "./tmp.main-contacts.html";
 
 
 const MainContactsComponent = {

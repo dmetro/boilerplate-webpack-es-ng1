@@ -1,7 +1,7 @@
 "use strict";
 
 import controller from "./app-root.controller.js";
-import template   from "./app-root.tmp.html";
+import template   from "./tmp.app-root.html";
 
 
 const AppRootComponent = {

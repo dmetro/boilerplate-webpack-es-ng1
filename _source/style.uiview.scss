@@ -1,0 +1,22 @@
+.uiview {
+    display: block;
+    position: relative;
+//    border: solid 5px #f0f;
+}
+
+.uiview_app {
+    height: 100%;
+    padding-top: 40px;
+    margin-top: -40px;
+    overflow: auto;
+    z-index: 1;
+}
+
+.uiview_main {
+    min-height: 100%;
+    height: 1px;
+    padding-top: 120px;
+    margin-top: -120px;
+    padding-bottom: 100px;
+    margin-bottom: -100px;
+}

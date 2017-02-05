@@ -1,0 +1,25 @@
+.header {
+    background-color: #eee;
+    display: block;
+    height: 60px;
+    z-index: 10;
+}
+
+.header__container {
+    padding: 5px;
+    text-align: center;
+}
+
+.header__head,
+.header__body,
+.header__foot {
+    line-height: 30px;
+    padding: 10px;
+    display: inline-block;
+    outline: dashed 1px #ddd;
+}
+
+
+.header__head {}
+.header__body {}
+.header__foot {}

@@ -11,8 +11,6 @@ import AppHeadModule from "./app-head/index.js";
 import AppMainModule from "./app-main/index.js";
 import AppNavModule  from "./app-nav/index.js";
 // ---------------------------------------------------------------
-import "./style.profile.css";
-
 
 
 const AppProfileModule = angular.module("AppProfileModule", [
